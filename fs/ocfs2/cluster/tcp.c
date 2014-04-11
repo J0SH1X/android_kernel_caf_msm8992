@@ -1979,7 +1979,7 @@ static void o2net_listen_data_ready(struct sock *sk)
 out:
 	read_unlock(&sk->sk_callback_lock);
 	if (ready != NULL)
-		ready(sk, bytes);
+		ready(sk);
 }
 
 static int o2net_open_listening_sock(__be32 addr, __be16 port)
